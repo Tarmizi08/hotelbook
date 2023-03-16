@@ -1,0 +1,18 @@
+﻿@model List<hotelbook.Models.HotelBooking>
+
+<h1>Hotel Book Details</h1>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <ul>
+                @foreach(var items in Model)
+                {
+                    <li>Guest ID : @items.Id</li>
+                    <li>Guest Name : @items.GuestName</li>
+                    <li>Guest Date Check In : @items.DateStart</li>
+                    <li>Guest Date Check Out : @items.DateEnd</li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

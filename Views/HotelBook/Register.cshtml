@@ -1,0 +1,42 @@
+﻿@model HotelBooking
+
+<h1 class="d-flex justify-content-center">Guest Registration Detail</h1>
+<hr/>
+<div class="row">
+    <div class="container d-flex justify-content-center"> 
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h5>Book Your Room Here</h5>
+                </div>
+                <div class="card-body">
+                    <form asp-controller="HotelBook" asp-action="SubmitForm" method="post">
+                        <div class="mb-3">
+                           <label class="form-label">ID</label>
+                           <input asp-for="Id" type="number" class="form-control"/>
+                        </div>
+                        <div class="mb-3">
+                           <label class="form-label">Enter Your Name</label>
+                           <input asp-for="GuestName" type="text" class="form-control"/>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">From Date</label>
+                           <input asp-for="DateStart" type="datetime-local" class="form-control"/>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">To Date</label>
+                           <input asp-for="DateEnd" type="datetime-local" class="form-control"/>
+                        </div>
+                        <div>
+                            <button class="btn btn-outline-primary" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer mt-2 mb-1">
+
+                </div>
+            </div>
+        
+        </div>
+    </div>
+</div>
